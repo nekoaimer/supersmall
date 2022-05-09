@@ -19,5 +19,7 @@ export default {
   left: 0;
   right: 0;
   text-align: center;
+  box-shadow:  0 -2px 0.5px rgba(80,80,80,.2);
+  /*background-color: #f6f6f6;*/
 }
 </style>

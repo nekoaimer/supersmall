@@ -1,25 +1,28 @@
 <template>
   <div id="app">
+    <keep-alive exclude="Detail"><router-view /></keep-alive>
     <MainTabBar></MainTabBar>
-    <router-link to="/home">home</router-link>
-    <router-link to="/cart">cart</router-link>
-    <router-link to="/category">category</router-link>
-    <router-link to="/profile">profile</router-link>
-    <keep-alive><router-view> </router-view></keep-alive>
   </div>
 </template>
 
 <script>
-import MainTabBar from "components/content/mainTabar/MainTabBar";
-
+import MainTabBar from "@/components/content/mainTabbar/MainTabBar";
+import Home from "./views/home/Home";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    MainTabBar
-  }
-}
+    MainTabBar,
+    Home,
+  },
+};
 </script>
 
 <style>
 @import "assets/css/base.css";
+#app {
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+}
 </style>
+
+
